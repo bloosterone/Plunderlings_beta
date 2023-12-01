@@ -50,7 +50,7 @@ body::-moz-scrollbar-track {
     background-color: #222222;
     scrollbar-width: thin; /* Para Firefox */
     
-   
+    overflow-x: hidden;
     -webkit-transition: background-color 1s ease; /* Safari y Chrome */
     -moz-transition:background-color 1s ease; /* Firefox */
     -ms-transition: background-color 1s ease; /* Internet Explorer */
