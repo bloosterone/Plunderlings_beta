@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../css/index.css">
+    <link rel="stylesheet" href="../css/presentacion.css">
+    <title>Plunderlings_beta</title>
+</head>
+
+<body>
+    <div class="presentacion">
+        <ul>
+            <li class="letras">
+              <input type="checkbox" />
+              <div class="estaLetra">P</div>
+            </li>
+            <li class="letras">
+              <input type="checkbox" />
+              <div>L</div>
+            </li>
+            <li class="letras">
+              <input type="checkbox" />
+              <div>U</div>
+            </li>
+            <li class="letras">
+              <input type="checkbox" />
+              <div>N</div>
+            </li>
+            <li class="letras">
+              <input type="checkbox" />
+              <div>D</div>
+            </li>
+            <li class="letras">
+              <input type="checkbox" />
+              <div >E</div>
+            </li>
+            <li class="letras">
+              <input type="checkbox" />
+              <div>R</div>
+            </li>
+            <li class="letras">
+              <input type="checkbox" />
+              <div>L</div>
+            </li>
+            <li class="letras">
+              <input type="checkbox" />
+              <div>I</div>
+            </li>
+            <li class="letras">
+              <input type="checkbox" />
+              <div>N</div>
+            </li>
+            <li class="letras">
+              <input type="checkbox" />
+              <div>G</div>
+            </li>
+            <li class="letras">
+              <input type="checkbox" />
+              <div >S</div>
+            </li>
+          </ul>
+          <div class="universe">
+            <h1>
+            <span class="word">Universe</span>
+          </h1>
+        </div>
+    </div>
+    <header>
+        <nav>
+
+        </nav>
+    </header>
+</body>
+<script>
+    setTimeout(() => {
+
+        
+        const letters = document.querySelectorAll('.letras');
+        
+        const word= document.querySelector('.word');
+        letters.forEach((letter, index) => {
+            setTimeout(() => {
+            letter.classList.add('visible');
+            word.classList.add('visible2');
+            }, index * 200); // Ajusta el retraso entre cada letra según tus necesidades
+        });
+    
+        
+
+    }, 1000);
+    
+   
+    const presentacion = document.querySelector('.presentacion');
+     
+    setTimeout(() => {
+      presentacion.style='top:-100%';
+     
+      
+    }, 4000);
+</script>
+</html>
