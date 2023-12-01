@@ -19,7 +19,7 @@
     justify-content: end;
     padding-right: 10%;
 }
-h1 {
+.universe_h1 {
   color: white;
   font-family: "Playfair Display", Vidaloka, serif;
   font-size: 8rem;
@@ -63,6 +63,7 @@ h1 {
   position: absolute;
   top: 0%;
   transition: top 1s ease-in;
+  opacity: 0;
 }
 
 ul {
@@ -74,6 +75,7 @@ ul {
 }
 
 li {
+
   list-style: none;
   opacity: 0;
     transition: transform 3s ease, opacity 1s ease;
@@ -95,13 +97,12 @@ input[type="checkbox"] {
   z-index:100;
 }
 
-div {
+.presentacion > ul > li div {
   position: relative;
-  height: 80px;
-  width: 80px;
+  width: auto;
   background: black;
   color: #fff;
-  font-family: 'Poppins', sans-serif;
+  font-family: 'Technor', sans-serif;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -109,7 +110,7 @@ div {
   font-weight:800;
   cursor: pointer;
   margin: 0 4px;
-  
+  text-align: center;
   box-shadow: -1px -1px 4px rgba(255, 255, 255, 0.05),
     4px 4px 6px rgba(0, 0, 0, 0.2),
     inset -1px -1px 4px rgba(255, 255, 255, 0.05),
@@ -134,9 +135,7 @@ div {
   color: yellow;
   text-shadow: 0 0 15px yellow, 0 0 25px yellow;
   animation: glow 1.5s linear infinite;
-  font-size: 2em; 
-  margin-bottom: 100px;
-  margin-right: 20px;
+  
 }
 
 @keyframes glow {
