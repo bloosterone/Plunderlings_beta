@@ -1,9 +1,9 @@
 :root{
-    /* --estructura: red;
+    --estructura: red;
     --estructura_hijo: green;
     --estructura_hijo-subhijo: pink; 
     --section: black;
-    */
+   
   } 
   *{
     margin: 0;
@@ -65,7 +65,7 @@
     max-width: 680px;
   }
   #typed{
-    color: #ed1c5b;;
+    color: #ed1c5b;
   }
   @media only screen and (max-width: 600px) {
     .first_section h1{
@@ -94,7 +94,7 @@
     border-radius: 30px;
     width: 90%;
     height: 90%;
-    background-color:  #cb6df0;
+    background-color:  #ed1c5b; 
     display: flex;
     justify-content: center;
     align-items: center;
