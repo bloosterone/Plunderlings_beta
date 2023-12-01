@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/css/index.css">
+    <link rel="stylesheet" href="/css/presentacion.css">
+    <link href="https://api.fontshare.com/v2/css?f[]=technor@900&display=swap" rel="stylesheet"> 
+    <link href="https://api.fontshare.com/v2/css?f[]=clash-display@600&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Kanit&display=swap" rel="stylesheet">
+<script src="https://unpkg.com/typed.js@2.0.15/dist/typed.umd.js"></script>
+   
+<title>Plunderlings_beta</title>
+</head>
+
+<body id="body">
+    <div class="presentacion">
+        <ul>
+            <li class="letras">
+              <input type="checkbox" />
+              <div class="estaLetra">P</div>
+            </li>
+            <li class="letras">
+              <input type="checkbox" />
+              <div>L</div>
+            </li>
+            <li class="letras">
+              <input type="checkbox" />
+              <div>U</div>
+            </li>
+            <li class="letras">
+              <input type="checkbox" />
+              <div>N</div>
+            </li>
+            <li class="letras">
+              <input type="checkbox" />
+              <div>D</div>
+            </li>
+            <li class="letras">
+              <input type="checkbox" />
+              <div >E</div>
+            </li>
+            <li class="letras">
+              <input type="checkbox" />
+              <div>R</div>
+            </li>
+            <li class="letras">
+              <input type="checkbox" />
+              <div>L</div>
+            </li>
+            <li class="letras">
+              <input type="checkbox" />
+              <div>I</div>
+            </li>
+            <li class="letras">
+              <input type="checkbox" />
+              <div>N</div>
+            </li>
+            <li class="letras">
+              <input type="checkbox" />
+              <div>G</div>
+            </li>
+            <li class="letras">
+              <input type="checkbox" />
+              <div >S</div>
+            </li>
+          </ul>
+          <div class="universe">
+            <h1 class="universe_h1">
+            <span class="word">Universe</span>
+          </h1>
+        </div>
+    </div>
+    <header>
+        <nav>
+
+        </nav>
+    </header>
+    <main>
+      <section class="first_section">
+        <h1>Welcome to Plunder<span id="typed"> </span>!</h1>
+        <div  id="test">
+          <p><i class="letras">planet</i></p>
+          <p><i class="letras">lings</i></p>
+          </div>
+          
+        <p>Plunderlings aims to present a fresh take on fantasy universes from a Caribbean perspective. A place where the “monsters” are pirate adventurers with emotions, hopes and dreams of their own. </p>
+      </section>
+      <section class="second_section">
+        <div class="second_window">
+          <h2>Plunderlings will continue expand this new world to incorporate new creatures inspired from island animals, legends and history.</h2>
+        </div>
+      </section>
+      <section class="third_section">
+        <div class="third_window">
+        </div>
+        <div class="third_window">
+        </div>
+      </section>
+      <section class="four_section">
+        <div class="four_window">
+          <h2>Plunderlings will continue expand this new world to incorporate new creatures inspired from island animals, legends and history.</h2>
+
+        </div>
+      </section>
+      <section class="first_section"></section>
+    </main>
+</body>
+<script>
+    setTimeout(() => {
+
+        
+        const letters = document.querySelectorAll('.letras');
+        
+        const word= document.querySelector('.word');
+        letters.forEach((letter, index) => {
+            setTimeout(() => {
+            letter.classList.add('visible');
+            word.classList.add('visible2');
+            }, index * 200); // Ajusta el retraso entre cada letra según tus necesidades
+        });
+    
+        
+
+    }, 1000);
+    
+   
+    const presentacion = document.querySelector('.presentacion');
+     
+    setTimeout(() => {
+      presentacion.style='top:-100%';
+     
+      
+    }, 4000);
+</script>
+<script src="/js/index.js"></script>
+</html>
