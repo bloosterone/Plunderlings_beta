@@ -1,8 +1,8 @@
 :root{
-    --estructura: red;
+    /* --estructura: red;
     --estructura_hijo: green;
     --estructura_hijo-subhijo: pink; 
-    --section: black;
+    --section: black; */
    
   } 
   *{
@@ -10,11 +10,52 @@
     padding: 0;
     box-sizing: border-box;
   }
+  /* Estilos para navegadores WebKit (Chrome, Safari) */
+body::-webkit-scrollbar {
+  width: 10px; /* Ancho de la barra de desplazamiento */
+  
+}
+
+body::-webkit-scrollbar-thumb {
+  background-color: #ed1c5b;; /* Color del pulgar (la parte que se arrastra) */
+  border-radius: 6px; /* Bordes redondeados del pulgar */
+}
+
+body::-webkit-scrollbar-track {
+  background-color: transparent; /* Color de fondo de la barra de desplazamiento */
+}
+
+/* Estilos para Firefox */
+/* Nota: A partir de Firefox 64, puedes usar también ::-webkit-scrollbar */
+/* Pero aún se proporciona ::-moz-scrollbar para versiones anteriores */
+body::-moz-scrollbar {
+  width: 10px; /* Ancho de la barra de desplazamiento */
+}
+
+body::-moz-scrollbar-thumb {
+  background-color: #ed1c5b;; /* Color del pulgar (la parte que se arrastra) */
+  border-radius: 6px; /* Bordes redondeados del pulgar */
+}
+
+body::-moz-scrollbar-track {
+  background-color: transparent; /* Color de fondo de la barra de desplazamiento */
+}
+
+  html{
+    scroll-behavior: smooth;
+  }
   html,body{
     width: 100%;
     height: 500vh;
-    background-color: #000;
-    transition: all 1s ease;
+    background-color: #222222;
+    scrollbar-width: thin; /* Para Firefox */
+    
+   
+    -webkit-transition: background-color 1s ease; /* Safari y Chrome */
+    -moz-transition:background-color 1s ease; /* Firefox */
+    -ms-transition: background-color 1s ease; /* Internet Explorer */
+    -o-transition: background-color 1s ease; /* Opera */
+    transition: background-color 1s ease; /* Propiedad no prefijada */
   }
   header{
     outline: 2px solid var(--estructura);
@@ -57,12 +98,13 @@
   }
   
   .first_section p{
+    width: 100%;
     font-family: 'Kanit', sans-serif;
-    font-size: 18px;
+    font-size: 30px;
     text-align: center;
     margin-top: 20px;
-    line-height: 32px;
-    max-width: 680px;
+    line-height: 42px;
+    max-width: 1000px;
   }
   #typed{
     color: #ed1c5b;
@@ -94,7 +136,7 @@
     border-radius: 30px;
     width: 90%;
     height: 90%;
-    background-color:  #ed1c5b; 
+    background-color:  #A4907C; 
     display: flex;
     justify-content: center;
     align-items: center;
@@ -128,12 +170,38 @@
       border-radius: 30px;
       width: 40%;
       height: 70%;
-      background-color:  #ff97d9;
-      display: flex;
-      justify-content: center;
-      align-items: center;
+      background-color:  #fff;
+      
       padding: 5%;
       box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+    }
+    .third_window-A{
+      border-radius: 40px;
+      width: 40%;
+      height: 70%;
+      
+      display: grid;
+      grid-template-columns: repeat(4, 120px);
+      grid-template-rows: repeat(6, 120px);
+      grid-gap: 10px;
+      justify-content: space-around;
+     align-content: space-around;
+     
+     
+    }
+    .third_window-target{
+      border-top-left-radius: 2.625rem;
+  border-bottom-right-radius: 2.625rem;
+  border-bottom-left-radius: 2.625rem;
+      box-shadow: rgba(0, 0, 0, 0.25) 0px 54px 55px, rgba(0, 0, 0, 0.12) 0px -12px 30px, rgba(0, 0, 0, 0.12) 0px 4px 6px, rgba(0, 0, 0, 0.17) 0px 12px 13px, rgba(0, 0, 0, 0.09) 0px -3px 5px;
+      transition: box-shadow .3s ease-in;
+    }
+    .third_window-target img{
+      width: 100%;
+      height: 100%;
+    }
+    .third_window-target:hover{
+      cursor: pointer;
     }
       /* ------------THIRD SECTION---------- */
 /* ------------FOUR SECTION---------- */
@@ -151,7 +219,7 @@
         border-radius: 30px;
         width: 90%;
         height: 90%;
-        background-color:  #FFF;
+        background-color:  #f9f0ff;;
         display: flex;
         justify-content: center;
         align-items: center;
@@ -165,4 +233,5 @@
     line-height: 52px;
     color: #000;
       }
+
       /* ------------THIRD SECTION---------- */

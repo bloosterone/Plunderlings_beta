@@ -27,18 +27,27 @@ const typed = new Typed('#typed', {
 	
 	if (topPosition<= 350 &&  topPosition>= -1766) {
 
-		body.style = 'background-color: #ed1c5b;'
-
+		body.style = 'background-color: #A4907C;'
+		
 
 	}
 	else if(topPosition<= -1766 && topPosition>= -4000 ){
-		body.style = 'background-color: #fff;'
+		
+		body.style = 'background-color: #f9f0ff;'
+		
+		
 	}
 	else{
-		body.style = 'background-color: #000;'
+		
+		body.style = 'background-color: #222222;'
+		
 	}
   }
-
+  
   // Agrega un event listener para el evento scroll
   window.addEventListener('scroll', handleScroll);
+  
 
+    
+    
+ 
