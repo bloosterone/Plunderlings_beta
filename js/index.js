@@ -16,38 +16,59 @@ const typed = new Typed('#typed', {
   const miDiv = document.querySelector('.second_window');
   const body = document.querySelector('#body');
 
+  
+//   document.addEventListener('aos:in:super-duper', ({ detail }) => {
+// 	console.log('animated in1', detail);
+// 	body.style = 'background-color:#A4907C';
+//   });
+//   document.addEventListener('aos:in:super-duper2', ({ detail }) => {
+// 	console.log('animated in2', detail);
+// 	body.style = 'background-color:#fff';
+//   });
+  
   function handleScroll() {
-	let windowHeight = window.innerHeight;
-	let rect = miDiv.getBoundingClientRect();
-	let topPosition = rect.top;
+    let topPosition = window.scrollY || window.pageYOffset || document.documentElement.scrollTop || document.body.scrollTop || 0;
 
+    // Ajusta la posición según el margen que has agregado
+    console.log(topPosition);
 
-	
-	// Ajusta la posición según el margen que has agregado
-	
-	if (topPosition<= 350 &&  topPosition>= -1766) {
+    if (topPosition >= 0 && topPosition <= 900) {
+        body.style.backgroundColor = '#222222';
+    } else if (topPosition >= 901 && topPosition <= 4700) {
+        body.style.backgroundColor = '#A4907C';
+    } else {
+        body.style.backgroundColor = '#f9f0ff';
+    }
+}
 
-		body.style = 'background-color: #A4907C;'
-		
-
-	}
-	else if(topPosition<= -1766 && topPosition>= -4000 ){
-		
-		body.style = 'background-color: #f9f0ff;'
-		
-		
-	}
-	else{
-		
-		body.style = 'background-color: #222222;'
-		
-	}
-  }
-  
-  // Agrega un event listener para el evento scroll
-  window.addEventListener('scroll', handleScroll);
+// Agrega event listeners para los eventos scroll y touchmove
+window.addEventListener('scroll', handleScroll);
+window.addEventListener('touchmove', handleScroll);
   
 
     
-    
+// function handleScroll() {
+//     let viewportHeight = window.innerHeight || document.documentElement.clientHeight;
+//     let scrollPosition = window.scrollY || window.pageYOffset || document.documentElement.scrollTop || document.body.scrollTop || 0;
+
+//     // Ajusta la posición según el margen que has agregado
+//     console.log(scrollPosition);
+
+//     // Calcula las condiciones en función de la altura del viewport
+//     let scrollThreshold1 = viewportHeight * 0.1;  // Porcentaje inferior del viewport
+//     let scrollThreshold2 = viewportHeight * 0.8;  // Porcentaje superior del viewport
+
+//     if (scrollPosition >= 0 && scrollPosition <= scrollThreshold1) {
+//         body.style.backgroundColor = '#222222';
+//     } else if (scrollPosition > scrollThreshold1 && scrollPosition <= scrollThreshold2) {
+//         body.style.backgroundColor = '#A4907C';
+//     } else {
+//         body.style.backgroundColor = '#f9f0ff';
+//     }
+// }
+
+// // Agrega event listeners para los eventos scroll y touchmove
+// window.addEventListener('scroll', handleScroll);
+// window.addEventListener('touchmove', handleScroll);
+
  

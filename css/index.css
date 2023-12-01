@@ -1,9 +1,9 @@
 :root{
-    /* --estructura: red;
+     /* --estructura: red;
     --estructura_hijo: green;
     --estructura_hijo-subhijo: pink; 
-    --section: black; */
-   
+    --section: black; 
+     */
   } 
   *{
     margin: 0;
@@ -58,12 +58,35 @@ body::-moz-scrollbar-track {
     transition: background-color 1s ease; /* Propiedad no prefijada */
   }
   header{
-    outline: 2px solid var(--estructura);
+   
     width: 100%;
-    height: 16%;
-    z-index: 1;
+    height: 10%;
+    z-index: 200;
     position: absolute;
     top: 0;
+
+    display: flex;
+    justify-content: center;
+    align-content: center;
+    
+    
+  
+
+  }
+  nav{
+    width: 80%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-content: center;
+    
+    border-bottom-right-radius: 2.625rem;
+      border-bottom-left-radius: 2.625rem;
+      backdrop-filter: blur(9.74349px);
+  -webkit-backdrop-filter: blur(9.74349px);
+  -moz-background-filter: blur(9.74349px);
+  box-shadow: rgb(0, 0, 0) 0px 20px 30px -10px;
+  padding: 10px;
   }
   main{
     width: 100%;
@@ -77,6 +100,18 @@ body::-moz-scrollbar-track {
     outline: 2px solid var(--estructura_hijo);
     background: transparent;
   }
+
+  /* ------------HEADER SECTION---------- */
+  .contenedor_header-img{
+    width: 20%;
+    height: 100%;
+    
+  }
+  .contenedor_header-img img{
+    width: 100%;
+    height: 100%;
+  }
+  /* ------------HEADER SECTION---------- */
   /* ------------FIRST SECTION---------- */
   .first_section{
     display: flex;
@@ -106,7 +141,7 @@ body::-moz-scrollbar-track {
     line-height: 42px;
     max-width: 1000px;
   }
-  #typed{
+  #typed,.red{
     color: #ed1c5b;
   }
   @media only screen and (max-width: 600px) {
@@ -138,20 +173,47 @@ body::-moz-scrollbar-track {
     height: 90%;
     background-color:  #A4907C; 
     display: flex;
-    justify-content: center;
-    align-items: center;
+    
+    
     padding: 5%;
+  }
+  .second_window_container{
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: start;
+  }
+  .second_window h1{
+    width: 100%;
+  font-family: 'Clash Display', sans-serif;
+  font-size: 7vw;
+  text-align: center;
+  font-weight: 600;
+  text-align: start;
+  max-width: 396px;
+  height: auto;
   }
   .second_window h2{
     font-family: 'Kanit', sans-serif;
-    font-size: 60px;
-    text-align: center;
+    font-size: 30px;
+    width: 100%;
     margin-top: 20px;
-    line-height: 52px;
+    font-weight: 200;
+    line-height: 30px;
     color: #fff;
     
   }
-  
+  @media only screen and (max-width: 600px) {
+    .second_window h1{
+      font-size: 70px;
+    }
+    .second_window h2{
+      font-size: 12px;
+      line-height: 20px;
+    }
+  }
   /* ------------SECOND SECTION---------- */
     /* ------------THIRD SECTION---------- */
 
@@ -171,9 +233,41 @@ body::-moz-scrollbar-track {
       width: 40%;
       height: 70%;
       background-color:  #fff;
-      
-      padding: 5%;
       box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+      position: relative;
+      overflow: hidden;
+      padding: 1%;
+    }
+    .third_window-container{
+      
+      width: 100%;
+      height: 50%;
+      display: flex;
+      justify-content: center;
+      align-items: start;
+      
+    }
+    .third_window-container h1{
+      width: 100%;
+    font-family: 'Clash Display', sans-serif;
+    color: #A4907C;
+    font-size: 10vw;
+    text-align: center;
+    font-weight: 600;
+    line-height: 1em;
+    }
+    .third_window-imgcontainer{
+      position: absolute;
+      left: 40%;
+      bottom: 0;
+      width: 100%;
+      height: 50%;
+      filter: drop-shadow(0px 22px 11px #000000);
+      /* outline: 1px solid var(--estructura_hijo-subhijo); */
+    }
+    .third_window-imgcontainer img{
+      width: 100%;
+      height: 100%;
     }
     .third_window-A{
       border-radius: 40px;
@@ -181,8 +275,8 @@ body::-moz-scrollbar-track {
       height: 70%;
       
       display: grid;
-      grid-template-columns: repeat(4, 120px);
-      grid-template-rows: repeat(6, 120px);
+      grid-template-columns: repeat(4, 20%);
+      grid-template-rows: repeat(3, 20%);
       grid-gap: 10px;
       justify-content: space-around;
      align-content: space-around;
@@ -191,19 +285,47 @@ body::-moz-scrollbar-track {
     }
     .third_window-target{
       border-top-left-radius: 2.625rem;
-  border-bottom-right-radius: 2.625rem;
-  border-bottom-left-radius: 2.625rem;
-      box-shadow: rgba(0, 0, 0, 0.25) 0px 54px 55px, rgba(0, 0, 0, 0.12) 0px -12px 30px, rgba(0, 0, 0, 0.12) 0px 4px 6px, rgba(0, 0, 0, 0.17) 0px 12px 13px, rgba(0, 0, 0, 0.09) 0px -3px 5px;
-      transition: box-shadow .3s ease-in;
+      border-bottom-right-radius: 2.625rem;
+      border-bottom-left-radius: 2.625rem;
+      filter: drop-shadow(0px 22px 11px #000000);
+      /* box-shadow: rgba(0, 0, 0, 0.25) 0px 54px 55px, rgba(0, 0, 0, 0.12) 0px -12px 30px, rgba(0, 0, 0, 0.12) 0px 4px 6px, rgba(0, 0, 0, 0.17) 0px 12px 13px, rgba(0, 0, 0, 0.09) 0px -3px 5px; */
+      transition: box-shadow .3s ease-in, filter 1s ease;
+
+      min-width: 85px;
+      min-height: 98px;
     }
     .third_window-target img{
       width: 100%;
       height: 100%;
+      object-fit: contain;
     }
     .third_window-target:hover{
       cursor: pointer;
+      filter: drop-shadow(0px 22px 11px #ed1c5b);
     }
-      /* ------------THIRD SECTION---------- */
+    @media only screen and (max-width: 844px) {
+      .third_section {
+        height: 200vh;
+        flex-direction: column;
+      }
+      .third_window-A{
+        width: 100%;
+        height: 50%;
+        grid-template-columns: repeat(4, 50px);
+        grid-template-rows: repeat(6, 50px);
+    }
+    .third_window{
+      width: 90%;
+      height: 40%;
+      padding: 5%;
+    }
+    .third_window-target{
+      min-width: 60px;
+      min-height: 60px;
+    }
+  }
+
+/* ------------THIRD SECTION---------- */
 /* ------------FOUR SECTION---------- */
       .four_section{
     

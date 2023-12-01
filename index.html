@@ -17,70 +17,17 @@
 </head>
 
 <body id="body">
-    <div class="presentacion">
-        <ul>
-            <li class="letras">
-              <input type="checkbox" />
-              <div class="estaLetra">P</div>
-            </li>
-            <li class="letras">
-              <input type="checkbox" />
-              <div>L</div>
-            </li>
-            <li class="letras">
-              <input type="checkbox" />
-              <div>U</div>
-            </li>
-            <li class="letras">
-              <input type="checkbox" />
-              <div>N</div>
-            </li>
-            <li class="letras">
-              <input type="checkbox" />
-              <div>D</div>
-            </li>
-            <li class="letras">
-              <input type="checkbox" />
-              <div >E</div>
-            </li>
-            <li class="letras">
-              <input type="checkbox" />
-              <div>R</div>
-            </li>
-            <li class="letras">
-              <input type="checkbox" />
-              <div>L</div>
-            </li>
-            <li class="letras">
-              <input type="checkbox" />
-              <div>I</div>
-            </li>
-            <li class="letras">
-              <input type="checkbox" />
-              <div>N</div>
-            </li>
-            <li class="letras">
-              <input type="checkbox" />
-              <div>G</div>
-            </li>
-            <li class="letras">
-              <input type="checkbox" />
-              <div >S</div>
-            </li>
-          </ul>
-          <div class="universe">
-            <h1 class="universe_h1">
-            <span class="word">Universe</span>
-          </h1>
-        </div>
-    </div>
-    <header>
+    <header data-aos="fade-down" data-aos-delay="1800"data-aos-duration="2000" >
         <nav>
-
+          <div class="menu"><p>News</p></div>
+          <div class="menu"><p>Characters</p></div>
+          <div class="contenedor_header-img"><img src="img/logo.webp" alt=""></div>
+          <div class="menu"><p>Faq</p></div>
+          <div class="menu"><p>Contact</p></div>
         </nav>
     </header>
     <main>
-      <section class="first_section" data-aos="zoom-in-up"data-aos-delay="800"data-aos-duration="1000">
+      <section class="first_section" data-aos="zoom-in-up"data-aos-delay="800"data-aos-duration="1000" data-aos-anchor-placement="top-bottom" >
         <h1>Welcome to Plunder<span id="typed"> </span>!</h1>
         <div  id="test">
           <p><i class="letras">planet</i></p>
@@ -91,13 +38,14 @@
       </section>
       <section class="second_section">
         <div class="second_window">
-          <h2 data-aos="fade-up"
-          data-aos-anchor-placement="bottom-bottom"
-          data-aos-delay="100"data-aos-duration="1000">Plunderlings will continue expand this new world to incorporate new creatures inspired from island animals, legends and history.</h2>
+          <div class="second_window_container" data-aos="fade-up" data-aos-delay="10"data-aos-duration="700" data-aos-anchor-placement="top-center" data-aos-id="super-duper">
+          <h1><span class="red">1/12 Scale</span> Action Figure</h1>
+          <h2 >Plunderlings will continue expand this new world to incorporate new creatures inspired from island animals, legends and history.</h2>
+          </div>
         </div>
       </section>
       <section class="third_section" >
-        <div class="third_window-A" data-aos="fade-right"data-aos-delay="800"data-aos-duration="1000">
+        <div class="third_window-A" data-aos="fade-right"data-aos-delay="700"data-aos-duration="800" >
          
           <div class="third_window-target"><img src="/img/pirata1.png" alt="pirata1"></div>
           <div class="third_window-target"><img src="/img/pirata02.png" alt="pirata2"></div>
@@ -111,23 +59,21 @@
           <div class="third_window-target"><img src="/img/pirata10.png" alt="pirata10"></div>
           <div class="third_window-target"><img src="/img/pirata11.png" alt="pirata11"></div>
           <div class="third_window-target"><img src="/img/pirata12.png" alt="pirata12"></div>
-          <div class="third_window-target">13</div>
-          <div class="third_window-target">14</div>
-          <div class="third_window-target">15</div>
-          <div class="third_window-target">16</div>
-          <div class="third_window-target">17</div>
-          <div class="third_window-target">18</div>
-          <div class="third_window-target">19</div>
-          <div class="third_window-target">20</div>
-          <div class="third_window-target">21</div>
+          
 
 
         </div>
-        <div class="third_window">
+        <div class="third_window" data-aos="fade-left"data-aos-delay="700"data-aos-duration="800" >
+          <div class="third_window-container">
+            <h1>Drench Abyss Limited Edition</h1>
+          </div>
+          <div class="third_window-imgcontainer">
+            <img src="img/fondo_model.png" alt="fondo del model">
+          </div>
         </div>
       </section>
       <section class="four_section">
-        <div class="four_window">
+        <div class="four_window" data-aos="fade-up" data-aos-delay="10"data-aos-duration="700" data-aos-anchor-placement="top-center" data-aos-id="super-duper2">
           <h2>Plunderlings will continue expand this new world to incorporate new creatures inspired from island animals, legends and history.</h2>
 
         </div>
@@ -139,32 +85,6 @@
 <script>
   AOS.init();
 </script>
-<script>
-    setTimeout(() => {
 
-        
-        const letters = document.querySelectorAll('.letras');
-        
-        const word= document.querySelector('.word');
-        letters.forEach((letter, index) => {
-            setTimeout(() => {
-            letter.classList.add('visible');
-            word.classList.add('visible2');
-            }, index * 200); // Ajusta el retraso entre cada letra según tus necesidades
-        });
-    
-        
-
-    }, 1000);
-    
-   
-    const presentacion = document.querySelector('.presentacion');
-     
-    setTimeout(() => {
-      presentacion.style='top:-100%';
-     
-      
-    }, 4000);
-</script>
 <script src="js/index.js"></script>
 </html>
