@@ -1,3 +1,6 @@
+
+
+
 const typed = new Typed('#typed', {
     stringsElement: '#test',// ID del elemento que contiene cadenas de texto a mostrar.
 	typeSpeed: 40, // Velocidad en mlisegundos para poner una letra,
@@ -56,56 +59,40 @@ window.addEventListener('scroll', function() {
   // Verificar si hay colisión comparando las posiciones
   if (detectarColision(miSection1)) {
     // Colisión detectada
-    console.log('Colisión detectada con la parte superior del navegador');
+    
     body.style.backgroundColor = '#222222';
   } else {
     // No hay colisión
-    console.log('Sin colisión con la parte superior del navegador');
+   
   }
   if (detectarColision(miSection2)) {
     // Colisión detectada
-    console.log('Colisión detectada con la parte superior del navegador');
+   
     body.style.backgroundColor = '#A4907C';
   } else {
     // No hay colisión
-    console.log('Sin colisión con la parte superior del navegador');
+    
   }
   if (detectarColision(miSection3)) {
     // Colisión detectada
-    console.log('Colisión detectada con la parte superior del navegador');
+   
     body.style.backgroundColor = '#A4907C';
   } else {
     // No hay colisión
-    console.log('Sin colisión con la parte superior del navegador');
+    
   }
   if (detectarColision(miSection4)) {
     // Colisión detectada
-    console.log('Colisión detectada con la parte superior del navegador');
+    
     body.style.backgroundColor = '#f9f0ff';
+    
   } else {
     // No hay colisión
-    console.log('Sin colisión con la parte superior del navegador');
+    
   }
 });
 
 
 
-let swiper = new Swiper(".mySwiper", {
-  effect: "coverflow",
-  grabCursor: true,
-  centeredSlides: true,
-  slidesPerView: "auto",
-  coverflowEffect: {
-    rotate: 50,
-    stretch: 0,
-    depth: 100,
-    modifier: 2,
-    slideShadows: true,
-    scale:"1"
-  },
-  pagination: {
-    el: ".swiper-pagination",
-    clickable:"true"
-  },
-});
+
 
