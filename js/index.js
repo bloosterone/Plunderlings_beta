@@ -13,62 +13,99 @@ const typed = new Typed('#typed', {
 	contentType: 'html', // 'html' o 'null' para texto sin formato
   });
 
-  const miDiv = document.querySelector('.second_window');
-  const body = document.querySelector('#body');
-
-  
-//   document.addEventListener('aos:in:super-duper', ({ detail }) => {
-// 	console.log('animated in1', detail);
-// 	body.style = 'background-color:#A4907C';
-//   });
-//   document.addEventListener('aos:in:super-duper2', ({ detail }) => {
-// 	console.log('animated in2', detail);
-// 	body.style = 'background-color:#fff';
-//   });
-  
-  function handleScroll() {
-    let topPosition = window.scrollY || window.pageYOffset || document.documentElement.scrollTop || document.body.scrollTop || 0;
-
-    // Ajusta la posición según el margen que has agregado
-    console.log(topPosition);
-
-    if (topPosition >= 0 && topPosition <= 900) {
-        body.style.backgroundColor = '#222222';
-    } else if (topPosition >= 901 && topPosition <= 4700) {
-        body.style.backgroundColor = '#A4907C';
-    } else {
-        body.style.backgroundColor = '#f9f0ff';
-    }
-}
-
-// Agrega event listeners para los eventos scroll y touchmove
-window.addEventListener('scroll', handleScroll);
-window.addEventListener('touchmove', handleScroll);
-  
-
-    
-// function handleScroll() {
-//     let viewportHeight = window.innerHeight || document.documentElement.clientHeight;
-//     let scrollPosition = window.scrollY || window.pageYOffset || document.documentElement.scrollTop || document.body.scrollTop || 0;
-
-//     // Ajusta la posición según el margen que has agregado
-//     console.log(scrollPosition);
-
-//     // Calcula las condiciones en función de la altura del viewport
-//     let scrollThreshold1 = viewportHeight * 0.1;  // Porcentaje inferior del viewport
-//     let scrollThreshold2 = viewportHeight * 0.8;  // Porcentaje superior del viewport
-
-//     if (scrollPosition >= 0 && scrollPosition <= scrollThreshold1) {
-//         body.style.backgroundColor = '#222222';
-//     } else if (scrollPosition > scrollThreshold1 && scrollPosition <= scrollThreshold2) {
-//         body.style.backgroundColor = '#A4907C';
-//     } else {
-//         body.style.backgroundColor = '#f9f0ff';
-//     }
-// }
-
-// // Agrega event listeners para los eventos scroll y touchmove
-// window.addEventListener('scroll', handleScroll);
-// window.addEventListener('touchmove', handleScroll);
-
  
+
+const miDiv = document.querySelector('.second_window');
+const body = document.querySelector('#body');
+
+const miSection1 = document.querySelector('.first_section');
+const miSection2 = document.querySelector('.second_section');
+const miSection3 = document.querySelector('.third_section');
+const miSection4 = document.querySelector('.four_window');
+const miSection5 = document.querySelector('.five_section');
+
+
+
+
+
+
+
+
+
+
+
+// Escuchar eventos de desplazamiento (scroll)
+window.addEventListener('scroll', function() {
+
+   
+
+//   const offsetBottom = miElemento.offsetTop + miElemento.offsetHeight;
+    function detectarColision(elemento){
+        let alturaElemento = elemento.offsetHeight;
+        // console.log("el elemento ofsetheight: "+ alturaElemento);
+        // Obtener la posición de desplazamiento actual
+        const scrollPos = (window.scrollY || window.scrollTop || document.getElementsByTagName("html")[0].scrollTop) + 200;
+        // console.log("el elemento top del navegador: "+ (scrollPos));
+        // Obtener la posición vertical del elemento
+        const elementoPos = elemento.offsetTop;
+        // console.log("posicion vertical del elemento: "+ elementoPos);
+        const colisiona = (scrollPos >= elementoPos && scrollPos <= elementoPos + alturaElemento);
+
+        return colisiona;
+    }
+  // Verificar si hay colisión comparando las posiciones
+  if (detectarColision(miSection1)) {
+    // Colisión detectada
+    console.log('Colisión detectada con la parte superior del navegador');
+    body.style.backgroundColor = '#222222';
+  } else {
+    // No hay colisión
+    console.log('Sin colisión con la parte superior del navegador');
+  }
+  if (detectarColision(miSection2)) {
+    // Colisión detectada
+    console.log('Colisión detectada con la parte superior del navegador');
+    body.style.backgroundColor = '#A4907C';
+  } else {
+    // No hay colisión
+    console.log('Sin colisión con la parte superior del navegador');
+  }
+  if (detectarColision(miSection3)) {
+    // Colisión detectada
+    console.log('Colisión detectada con la parte superior del navegador');
+    body.style.backgroundColor = '#A4907C';
+  } else {
+    // No hay colisión
+    console.log('Sin colisión con la parte superior del navegador');
+  }
+  if (detectarColision(miSection4)) {
+    // Colisión detectada
+    console.log('Colisión detectada con la parte superior del navegador');
+    body.style.backgroundColor = '#f9f0ff';
+  } else {
+    // No hay colisión
+    console.log('Sin colisión con la parte superior del navegador');
+  }
+});
+
+
+
+let swiper = new Swiper(".mySwiper", {
+  effect: "coverflow",
+  grabCursor: true,
+  centeredSlides: true,
+  slidesPerView: "auto",
+  coverflowEffect: {
+    rotate: 50,
+    stretch: 0,
+    depth: 100,
+    modifier: 2,
+    slideShadows: true,
+    scale:"1"
+  },
+  pagination: {
+    el: ".swiper-pagination",
+    clickable:"true"
+  },
+});
+
