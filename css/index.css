@@ -44,6 +44,7 @@
     background: transparent;
     min-height: 100vh;
     overflow-x: hidden;
+    overflow-y: hidden;
   }
 
   /* ------------HEADER SECTION---------- */
@@ -795,7 +796,7 @@
           flex-direction: row;
           align-items: center;
           position: relative;
-
+          
           & .seven_section_A{
             width: 60%;
             height: 90%;
