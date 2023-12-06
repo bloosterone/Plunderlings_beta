@@ -11,7 +11,7 @@
     box-sizing: border-box;
   }
   /* Estilos para navegadores WebKit (Chrome, Safari) */
-
+  
   
   body{
     width: 100%;
@@ -19,7 +19,6 @@
     background-color: #222222;
     scrollbar-width: thin; /* Para Firefox */
     outline: 1px dashed red;
-    overflow-x: hidden;
     -webkit-transition: background-color 1s ease; /* Safari y Chrome */
     -moz-transition:background-color 1s ease; /* Firefox */
     -ms-transition: background-color 1s ease; /* Internet Explorer */
@@ -33,16 +32,17 @@
     height: 100%;
     display: flex;
     flex-direction: column;
-    overflow: hidden
-  
+    
+    
   
   }
   section{
     width: 100%;
-    height: 100%;
+    height: 100vh;
     outline: 2px solid var(--estructura_hijo);
     background: transparent;
     min-height: 100vh;
+     overflow: hidden;
     
   }
 
@@ -367,7 +367,8 @@
       display: flex;
       justify-content: center;
       align-items: start;
-      
+      position: relative;
+      overflow-x: hidden;
     }
     .third_window-container h1{
       width: 100%;
@@ -380,7 +381,8 @@
     }
     .third_window-imgcontainer{
       position: absolute;
-      left: 30%;
+      
+      left: 0;
       bottom: 0;
       width: 100%;
       height: 50%;
@@ -391,6 +393,7 @@
       position: absolute;
       width: 100%;
       height: 100%;
+      left: 30%;
       display: flex;
       justify-content: start;
       align-items: center;
@@ -404,7 +407,7 @@
       width: 100%;
       height: 100%;
      position: relative;
-     bottom: 60px;
+     bottom: 50px;
       left: -40px;
 
       user-select: none;
@@ -413,6 +416,7 @@
     .third_window-imgcontainer img{
       width: 100%;
       height: 100%;
+      position: absolute;
     }
     .third_window-A{
       border-radius: 40px;
@@ -556,7 +560,7 @@
         align-content: center;
         position: relative;
         flex-direction: column;
-        
+        overflow: hidden;
       }
       .five_section_title{
         width: 100%;
@@ -587,15 +591,19 @@
         align-items: center;
         align-content: center;
         position: relative;
-        
+        overflow: hidden;
       }
       .swiper {
         width: 100%;
         height:60%;
         padding-top: 100px;
         padding-bottom: 100px;
-        
+        overflow: hidden;
     
+      }
+      .swiper .swiper-wrapper{
+        width: 100%;
+        
       }
       
       .swiper .swiper-slide {
@@ -704,7 +712,7 @@
           width: 100%;
           height: 50%;
           outline: 1px solid var(--estructura);
-          padding: 10%;
+          
         }
         .container_details{
           width: 100%;
