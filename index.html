@@ -14,6 +14,7 @@
 <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
 <!-- -----test styles---- -->
 
+<script type="module" src="https://ajax.googleapis.com/ajax/libs/model-viewer/3.3.0/model-viewer.min.js"></script>
 
 <!-- -----test styles---- -->    
 <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11.0.5/swiper-bundle.min.css">
@@ -31,7 +32,7 @@
     </div>
   </div>
   
-    <header data-aos="fade-down" data-aos-delay="1800"data-aos-duration="2000" >
+    <!-- <header data-aos="fade-down" data-aos-delay="1800"data-aos-duration="2000" >
         <nav>
           <div class="menu"><p>News</p></div>
           <div class="menu"><p>Characters</p></div>
@@ -39,18 +40,35 @@
           <div class="menu"><p>Faq</p></div>
           <div class="menu"><p>Contact</p></div>
         </nav>
-    </header>
+    </header> -->
     <main>
-      <section class="first_section" data-aos="zoom-in-up"data-aos-delay="800"data-aos-duration="1000" data-aos-anchor-placement="top-bottom" >
-        <h1>Welcome to Plunder<span id="typed"> </span>!</h1>
-        <div  id="test">
-          <p><i class="letras">planet</i></p>
-          <p><i class="letras">lings</i></p>
-          </div>
-          
-        <p>Plunderlings aims to present a fresh take on fantasy universes from a Caribbean perspective. A place where the “monsters” are pirate adventurers with emotions, hopes and dreams of their own. </p>
-      </section>
+      <section class="first_section" >
+        <div class="first_section-containerA"  data-aos="zoom-in-up"data-aos-delay="800"data-aos-duration="1000" data-aos-anchor-placement="top-bottom">
+          <h1>Welcome to Plunder<span id="typed"> </span>!</h1>
+          <div  id="test">
+            <p><i class="letras">planet</i></p>
+            <p><i class="letras">lings</i></p>
+            </div>
+            
+          <p>Plunderlings aims to present a fresh take on fantasy universes from a Caribbean perspective. A place where the “monsters” are pirate adventurers with emotions, hopes and dreams of their own. </p>
+        
+
+        </div>
+        <div class="first_section-containerB">
+              <div class="b_plunder" data-aos="fade-down-left" data-aos-delay="1600"data-aos-duration="500"><img src="img/fondo.png" alt=""></div>
+              <div class="b_island" data-aos-anchor-placement="top-bottom" data-aos="new-animation3" data-aos-easing="ease-in-out" data-aos-delay="3000" data-aos-duration="1000"> <img src="img/logo.webp" alt=""></div>
+              <div class="b_cloud1" data-aos="new-animation" data-aos-delay="1800" data-aos-duration="3000"><img src="img/nube.png" alt=""></div>
+              <div class="b_cloud2" data-aos="new-animation2" data-aos-delay="1800" data-aos-duration="3000"><img src="img/nube.png" alt=""></div>
+             
+
+        </div>
+        </section>
       <section class="second_section">
+        <div class="contenedor_palmera">
+          <div class="primera"> <img  src="img/ramas.png" alt=""></div>
+        
+          
+        </div>
         <div class="second_window">
           <div class="second_window_container" data-aos="fade-up" data-aos-delay="10"data-aos-duration="700" data-aos-anchor-placement="top-center" data-aos-id="super-duper">
             <h2>
@@ -60,25 +78,61 @@
                 Figure
             </h2>
             <p >Plunderlings will continue expand this new world to incorporate new creatures inspired from island animals, legends and history.</p>
-
+            
           </div>
         </div>
       </section>
       <section class="third_section" >
         <div class="third_window-A" data-aos="fade-right"data-aos-delay="700"data-aos-duration="800" >
          
-          <div class="third_window-target"><img src="/img/pirata1.png" alt="pirata1"></div>
-          <div class="third_window-target"><img src="/img/pirata02.png" alt="pirata2"></div>
-          <div class="third_window-target"><img src="/img/pirata03.png" alt="pirata3"></div>
-          <div class="third_window-target"><img src="/img/pirata04.png" alt="pirata4"></div>
-          <div class="third_window-target"><img src="/img/pirata05.png" alt="pirata5"></div>
-          <div class="third_window-target"><img src="/img/pirata06.png" alt="pirata6"></div>
-          <div class="third_window-target"><img src="/img/pirata07.png" alt="pirata7"></div>
-          <div class="third_window-target"><img src="/img/pirata08.png" alt="pirata8"></div>
-          <div class="third_window-target"><img src="/img/pirata09.png" alt="pirata9"></div>
-          <div class="third_window-target"><img src="/img/pirata10.png" alt="pirata10"></div>
-          <div class="third_window-target"><img src="/img/pirata11.png" alt="pirata11"></div>
-          <div class="third_window-target"><img src="/img/pirata12.png" alt="pirata12"></div>
+          <div class="third_window-target">
+            <button onclick="switchSrc(this, 'king_kong')"></button>
+            <img src="/img/pirata1.png" class="slide" alt="pirata1">
+          </div>
+          <div class="third_window-target">
+            <button onclick="switchSrc(this, 'batman')"></button>
+            <img src="/img/pirata02.png" class="slide" alt="pirata2">
+          </div>
+          <div class="third_window-target">
+            <button onclick="switchSrc(this, 'ironman')"></button>
+            <img src="/img/pirata03.png" class="slide" alt="pirata3">
+          </div>
+          <div class="third_window-target">
+            <button onclick="switchSrc(this, 'hulk')"></button>
+            <img src="/img/pirata04.png" class="slide" alt="pirata4">
+          </div>
+          <div class="third_window-target">
+            <button onclick="switchSrc(this, 'king_kong')"></button>
+            <img src="/img/pirata05.png" class="slide" alt="pirata5">
+          </div>
+          <div class="third_window-target">
+            <button onclick="switchSrc(this, 'batman')"></button>
+            <img src="/img/pirata06.png" class="slide" alt="pirata6">
+          </div>
+          <div class="third_window-target">
+            <button onclick="switchSrc(this, 'ironman')"></button>
+            <img src="/img/pirata07.png" class="slide" alt="pirata7">
+          </div>
+          <div class="third_window-target">
+            <button onclick="switchSrc(this, 'hulk')"></button>
+            <img src="/img/pirata08.png" class="slide" alt="pirata8">
+          </div>
+          <div class="third_window-target">
+            <button onclick="switchSrc(this, 'king_kong')"></button>
+            <img src="/img/pirata09.png" class="slide" alt="pirata9">
+          </div>
+          <div class="third_window-target">
+            <button onclick="switchSrc(this, 'batman')"></button>
+            <img src="/img/pirata10.png" class="slide" alt="pirata10">
+          </div>
+          <div class="third_window-target">
+            <button onclick="switchSrc(this, 'ironman')"></button>
+            <img src="/img/pirata11.png" class="slide" alt="pirata11">
+          </div>
+          <div class="third_window-target">
+            <button onclick="switchSrc(this, 'hulk')"></button>
+            <img src="/img/pirata12.png" class="slide" alt="pirata12">
+          </div>
           
 
 
@@ -88,6 +142,9 @@
             <h1>Drench Abyss Limited Edition</h1>
           </div>
           <div class="third_window-imgcontainer">
+            <div class="contenedor__menu-modelosA">
+              <model-viewer src="/assets/ironman.glb" poster="/assets/ironman.webp" shadow-intensity="1" camera-controls auto-rotate loading="lazy" alt="A 3D model carousel"></model-viewer>
+            </div>
             <img src="img/fondo_model.png" alt="fondo del model">
           </div>
         </div>
@@ -150,9 +207,41 @@
       
   
       </section>
+      <section class="six_section">6</section>
+      <section class="seven_section">
+        <div class="seven_section_A-contenedor">
+          <img src="img/left_footer.png" alt="" data-aos="fade-right"data-aos-delay="700"data-aos-duration="1800">
+        </div>
+        <div class="seven_section_A">
+          
+        </div>
+        <div class="seven_section_B">
+          <div class="seven_section_B-contenedor"data-aos="fade-up" data-aos-delay="200"data-aos-duration="1000" data-aos-anchor-placement="top-center" data-aos-id="super-duper">
+            
+            <div class="contenedor_contacto">
+              <h1>Lets <br>talk!</h1>
+            </div>
+            <div class="container-form">
+              <h2 class="title_contact">Contact us</h2>
+              <div class="brand-logo"></div>
+              
+              <div class="inputs" >
+                <label>Name</label>
+                <input type="name" placeholder="Enter your name" />
+                <label>Email</label>
+                <input type="email" placeholder="example@test.com" />
+                <label>Message</label>
+                <input type="text" placeholder="Enter your message" />
+                <button type="submit">SEND</button>
+              </div>
+            
+            </div>
+          </div>
+        </div>
+      </section>
     </main>
 </body>
-<script src="js/jquery-3.6.0.min.js"></script>
+
 <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
 
 
@@ -162,15 +251,17 @@
 
 <script type="module">
   import Swiper from 'https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.mjs'
-  const swiper = new Swiper(".mySwiper", {
+  let swiper;
+  
+   swiper = new Swiper(".mySwiper", {
     effect: "coverflow",
     grabCursor: true,
     centeredSlides: true,
     slidesPerView: "auto",
     coverflowEffect: {
-      rotate: 50,
+      rotate: 10, //50
       stretch: -100,
-      depth: 100,
+      depth: 1000,
       modifier: 1,
       slideShadows: false,
     },
@@ -179,13 +270,33 @@
       clickable:true
     },
     initialSlide: 1,
+    loop: true,
+    on: {
+        slideChangeTransitionStart: function () {
+          // Elimina la clase de desenfoque de todos los elementos al cambiar el slide
+          document.querySelectorAll('.swiper-slide').forEach(function (el) {
+            el.classList.remove('blur');
+          });
+        },
+        slideChangeTransitionEnd: function () {
+          // Agrega la clase de desenfoque al slide actual y a los slides vecinos
+          let currentIndex = swiper.realIndex;
+          let slides = document.querySelectorAll('.swiper-slide');
+          slides.forEach(function (el, index) {
+            if (index < currentIndex - 1 || index > currentIndex + 1) {
+              el.classList.add('blur');
+            }
+          });
+        },
+      }
   });
 </script>
 <script>
   AOS.init();
 </script>
-
+<script src="js/model.js" type="module"></script>
 
 
 <script src="js/loader.js"></script>
+<script src="js/jquery-3.6.0.min.js"></script>
 </html>

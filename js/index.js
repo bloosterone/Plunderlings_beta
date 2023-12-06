@@ -68,7 +68,7 @@ window.addEventListener('scroll', function() {
   if (detectarColision(miSection2)) {
     // Colisión detectada
    
-    body.style.backgroundColor = '#A4907C';
+    body.style.backgroundColor = '#DCD7C9';
   } else {
     // No hay colisión
     
@@ -76,7 +76,7 @@ window.addEventListener('scroll', function() {
   if (detectarColision(miSection3)) {
     // Colisión detectada
    
-    body.style.backgroundColor = '#A4907C';
+    body.style.backgroundColor = '#DCD7C9';
   } else {
     // No hay colisión
     
@@ -84,7 +84,7 @@ window.addEventListener('scroll', function() {
   if (detectarColision(miSection4)) {
     // Colisión detectada
     
-    body.style.backgroundColor = '#f9f0ff';
+    body.style.backgroundColor = '#EEE3CB';
     
   } else {
     // No hay colisión
