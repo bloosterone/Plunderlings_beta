@@ -13,7 +13,7 @@
 <script src="https://unpkg.com/typed.js@2.0.15/dist/typed.umd.js"></script>
 <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
 <!-- -----test styles---- -->
-
+<script src="https://kit.fontawesome.com/42dbfd4b42.js" crossorigin="anonymous"></script>
 <script type="module" src="https://ajax.googleapis.com/ajax/libs/model-viewer/3.3.0/model-viewer.min.js"></script>
 
 <!-- -----test styles---- -->    
@@ -31,16 +31,6 @@
       <div class="cube2"></div>
     </div>
   </div>
-  
-    <!-- <header data-aos="fade-down" data-aos-delay="1800"data-aos-duration="2000" >
-        <nav>
-          <div class="menu"><p>News</p></div>
-          <div class="menu"><p>Characters</p></div>
-          <div class="contenedor_header-img menu"><img src="img/logo.webp" alt=""></div>
-          <div class="menu"><p>Faq</p></div>
-          <div class="menu"><p>Contact</p></div>
-        </nav>
-    </header> -->
     <main>
       <section class="first_section" >
         <div class="first_section-containerA"  data-aos="zoom-in-up"data-aos-delay="800"data-aos-duration="1000" data-aos-anchor-placement="top-bottom">
@@ -207,7 +197,27 @@
       
   
       </section>
-      <section class="six_section">6</section>
+      <section class="six_section">
+        <div class="container_details_img"></div>
+        <div class="container_details">
+        <details>
+          <summary><div class="icono"><i class="fa-solid red fa-plus"></i></div> Where can I buy Plunderlings?</summary>
+          <div class="container_details-text">
+          <a href=""><p><span class="red">Entertainment Earth</span>  : Plunderlong and Plunderstrong preorders</p></a>
+            <br><a href=""><p><span class="red">BigBadToyStore:</span>  Plunderlings for sale and Plunderlongs and Plunderstrong preorders</p></a>
+            
+          </div>
+        </details>
+        <details>
+          <summary><div class="icono"><i class="fa-solid red fa-plus"></i></div> Where can I buy hatchlings and accessories?</summary>
+          <div class="container_details-text">
+          <p><span class="red">Accessories</span> and <span class="red">hatchlings</span> are still in limited quantities, however, from time to time we have sales through this website's shop. Subscribe or fill out our contact form to be added to our mailing list for future sale updates.</p>
+            
+            
+          </div>
+        </details>
+        </div>
+      </section>
       <section class="seven_section">
         <div class="seven_section_A-contenedor">
           <img src="img/left_footer.png" alt="" data-aos="fade-right"data-aos-delay="700"data-aos-duration="1800">
@@ -248,13 +258,43 @@
 <script src="js/main.js"type="module"></script>
 
     <script src="js/index.js" ></script>
-
+<script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
 <script type="module">
-  import Swiper from 'https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.mjs'
-  let swiper;
-  
+
+
+
+
+
+  let swiper="";
    swiper = new Swiper(".mySwiper", {
-    effect: "coverflow",
+    
+    on: {
+        slideChangeTransitionStart: function () {
+          // Elimina la clase de desenfoque de todos los elementos al cambiar el slide
+          document.querySelectorAll('.swiper-slide').forEach(function (el) {
+            el.classList.remove('blur');
+          });
+
+
+          let currentIndex = swiper.realIndex;
+          console.log(currentIndex)
+           let slides = document.querySelectorAll('.swiper-slide');
+         slides.forEach(function (el, index) {
+            if (index < currentIndex - 1 || index > currentIndex + 1) {
+              el.classList.add('blur');
+            }
+          });
+        },
+        click: function () {
+        // Obtiene el índice del slide actual al hacer clic
+        let currentIndex = swiper.realIndex;
+
+        // Abre una nueva pestaña con la URL deseada (reemplaza 'URL_DESEADA' con tu URL real)
+        window.open('../html/news.html', '_blank');
+      },
+      
+      },
+      effect: "coverflow",
     grabCursor: true,
     centeredSlides: true,
     slidesPerView: "auto",
@@ -270,25 +310,7 @@
       clickable:true
     },
     initialSlide: 1,
-    loop: true,
-    on: {
-        slideChangeTransitionStart: function () {
-          // Elimina la clase de desenfoque de todos los elementos al cambiar el slide
-          document.querySelectorAll('.swiper-slide').forEach(function (el) {
-            el.classList.remove('blur');
-          });
-        },
-        slideChangeTransitionEnd: function () {
-          // Agrega la clase de desenfoque al slide actual y a los slides vecinos
-          let currentIndex = swiper.realIndex;
-          let slides = document.querySelectorAll('.swiper-slide');
-          slides.forEach(function (el, index) {
-            if (index < currentIndex - 1 || index > currentIndex + 1) {
-              el.classList.add('blur');
-            }
-          });
-        },
-      }
+    // loop: true,
   });
 </script>
 <script>

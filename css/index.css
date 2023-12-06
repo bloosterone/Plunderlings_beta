@@ -11,45 +11,14 @@
     box-sizing: border-box;
   }
   /* Estilos para navegadores WebKit (Chrome, Safari) */
-body::-webkit-scrollbar {
-  width: 10px; /* Ancho de la barra de desplazamiento */
+
   
-}
-
-body::-webkit-scrollbar-thumb {
-  background-color: #ed1c5b;; /* Color del pulgar (la parte que se arrastra) */
-  border-radius: 6px; /* Bordes redondeados del pulgar */
-}
-
-body::-webkit-scrollbar-track {
-  background-color: transparent; /* Color de fondo de la barra de desplazamiento */
-}
-
-/* Estilos para Firefox */
-/* Nota: A partir de Firefox 64, puedes usar también ::-webkit-scrollbar */
-/* Pero aún se proporciona ::-moz-scrollbar para versiones anteriores */
-body::-moz-scrollbar {
-  width: 10px; /* Ancho de la barra de desplazamiento */
-}
-
-body::-moz-scrollbar-thumb {
-  background-color: #ed1c5b;; /* Color del pulgar (la parte que se arrastra) */
-  border-radius: 6px; /* Bordes redondeados del pulgar */
-}
-
-body::-moz-scrollbar-track {
-  background-color: transparent; /* Color de fondo de la barra de desplazamiento */
-}
-
-  html{
-    scroll-behavior: smooth;
-  }
   body{
     width: 100%;
-    height: 500vh;
-    background-color: #222;
+    height: 100%;
+    background-color: #222222;
     scrollbar-width: thin; /* Para Firefox */
-    
+    outline: 1px dashed red;
     overflow-x: hidden;
     -webkit-transition: background-color 1s ease; /* Safari y Chrome */
     -moz-transition:background-color 1s ease; /* Firefox */
@@ -58,67 +27,29 @@ body::-moz-scrollbar-track {
     transition: background-color 1s ease; /* Propiedad no prefijada */
     
   }
-  header{
-   
-    width: 100%;
-    height: 10%;
-    z-index: 200;
-    position: absolute;
-    top: 0;
-
-    display: flex;
-    justify-content: center;
-    align-content: center;
-
-  }
-  nav{
-    width: 80%;
-    height: 100%;
-    display: flex;
-    justify-content: space-around;
-    align-content: center;
-    
-    border-bottom-right-radius: 2.625rem;
-      border-bottom-left-radius: 2.625rem;
-      backdrop-filter: blur(9.74349px);
-  -webkit-backdrop-filter: blur(9.74349px);
-  -moz-background-filter: blur(9.74349px);
-  box-shadow: rgb(0, 0, 0) 0px 20px 30px -10px;
-  padding: 10px;
-  }
+ 
   main{
     width: 100%;
     height: 100%;
     display: flex;
     flex-direction: column;
-    
+    overflow-x: hidden;
   
   
   }
   section{
     width: 100%;
-    height: 100vh;
+    height: 100%;
     outline: 2px solid var(--estructura_hijo);
     background: transparent;
     min-height: 100vh;
-  
+    overflow-x: hidden;
   }
 
   /* ------------HEADER SECTION---------- */
-  .menu{
-    width: 20%;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    color: #fff;
-    font-family: 'Kanit', sans-serif;
-  font-size: 20px;
-  }
  
-  .contenedor_header-img img{
-    width: 100%;
-    height: 100%;
-  }
+ 
+  
   /* ------------HEADER SECTION---------- */
   /* ------------FIRST SECTION---------- */
   [data-aos="new-animation"] {
@@ -625,7 +556,7 @@ body::-moz-scrollbar-track {
         align-content: center;
         position: relative;
         flex-direction: column;
-
+        
       }
       .five_section_title{
         width: 100%;
@@ -648,7 +579,7 @@ body::-moz-scrollbar-track {
   
       }
       .five_section_container{
-        height: 100%;
+        height: 80%;
         margin: 0;
         padding: 0;
         display: flex;
@@ -663,6 +594,7 @@ body::-moz-scrollbar-track {
         height:60%;
         padding-top: 100px;
         padding-bottom: 100px;
+        
     
       }
       
@@ -762,6 +694,98 @@ body::-moz-scrollbar-track {
 
 
         /* ------------SIX SECTION---------- */
+        .six_section{
+          display: flex;
+          flex-direction: column;
+          justify-content: center;
+          
+        }
+        .container_details_img{
+          width: 100%;
+          height: 50%;
+          outline: 1px solid var(--estructura);
+          padding: 10%;
+        }
+        .container_details{
+          width: 100%;
+          height: 50%;
+          outline: 1px solid var(--estructura);
+         padding-top: 4%;
+          display: flex;
+          flex-direction: row;
+          justify-content: space-around;
+          align-content: flex-start;
+          align-items: start;
+            
+          & details {
+            border: 1px solid rgba(97, 125, 255, 0.2);
+            width: 40%;
+            background: #f7fbff;
+            border-radius: 20px;
+            height: 80px;
+            transition: all .5s ease-out; /* Añade una transición suave */
+            overflow: hidden; /* Oculta el contenido cuando está contraído */
+          }
+          & details summary {
+            user-select: none;
+            width: 100%;
+            cursor: pointer;
+            height: 80px;
+            font-weight: bold;
+            font-family: 'Kanit', sans-serif;
+            font-size: 20px;
+            font-weight: 200;
+            
+            color: rgba(30, 48, 86, 0.8);
+            display: flex;
+            justify-content: start;
+            align-items: center;
+            position: relative;
+            
+          }
+          & details summary .icono{
+            outline: 1px solid #ed1c5b;
+            position: relative;
+            border-radius: 45px;
+            left: 0;
+            width: 20px;
+            height:20px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            margin-left: 20px;
+            margin-right: 20px;
+            
+          }
+          & details summary .icono i{
+            font-size: 20px;
+          }
+          & details .container_details-text{
+         
+            width: 100%;
+            height: 70%;
+            padding-left: 14%;
+            padding-right: 10%;
+          }
+          & details .container_details-text p {
+          
+            position: relative;
+            font-family: 'Kanit', sans-serif;
+            font-size: 16px;
+            color: rgba(30, 48, 86, 0.8);
+          }
+          &  details[open] {
+            height: 240px; /* Altura máxima cuando está expandido */
+            border: none;
+            box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+           }
+        }        
+        
+        
+        
+        
+       
+       
         /* ------------SIX SECTION---------- */
         /* ------------SEVEN SECTION---------- */
       .seven_section{

@@ -7,6 +7,7 @@ document.addEventListener("DOMContentLoaded", function () {
   
     // Ejemplo: Después de cargar recursos, muestra el contenido principal
     showMainContent();
+    
   });
   
   // Función para mostrar el loader
