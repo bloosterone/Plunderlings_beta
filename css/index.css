@@ -358,7 +358,7 @@
     line-height: 1em;
     }
     .third_window-imgcontainer{
-      position: absolute;
+      position: relative;
       
       left: 0;
       bottom: 0;
@@ -369,10 +369,10 @@
       /* outline: 1px solid var(--estructura_hijo-subhijo); */
     }
     .contenedor__menu-modelosA{
-      position: absolute;
+      position: relative;
       width: 100%;
       height: 100%;
-      left: 30%;
+   
       display: flex;
       justify-content: start;
       align-items: center;
@@ -387,7 +387,7 @@
       height: 100%;
      position: relative;
      bottom: 50px;
-      left: -40px;
+      
 
       user-select: none;
       z-index: 150;
