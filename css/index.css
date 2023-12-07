@@ -350,7 +350,7 @@
       justify-content: space-around;
       align-content: center;
       align-items: center;
-      
+      overflow-x:hidden ;
       
     }
     .third_window{
