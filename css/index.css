@@ -266,34 +266,7 @@
     outline: 1px solid var(--estructura_hijo);
     position: relative;
   }
-  .contenedor_palmera{
-    width: 100%;
-    height: 100%;
-    outline: 1px solid var(--estructura);
-    position: absolute;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-content: center;
-    
-    z-index: -10;
-  }
- 
-  .primera{
-    width: 110%;
-    height: 110%;
-    display: flex;
-    flex-direction: column;
-    justify-content: end;
-    align-items: flex-end;
-    align-content: end;
-
-  }
-  .primera img{
-    width: 100%;
-    height: 100%;
-    
-  }
+  
   
   .second_window_container{
    
