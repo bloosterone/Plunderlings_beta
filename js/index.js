@@ -29,9 +29,22 @@ const miSection5 = document.querySelector('.five_section');
 
 
 
+const details = document.querySelectorAll('.details');
 
 
-
+details.forEach((e, index) => {
+  e.addEventListener('toggle', () => {
+    if (index === 0 && e.open) {
+      
+      details[1].removeAttribute('open');
+    } else if (index === 1 && e.open) {
+     
+      details[0].removeAttribute('open');
+    } else {
+      
+    }
+  });
+});
 
 
 
@@ -40,7 +53,6 @@ const miSection5 = document.querySelector('.five_section');
 // Escuchar eventos de desplazamiento (scroll)
 window.addEventListener('scroll', function() {
 
-   
 
 //   const offsetBottom = miElemento.offsetTop + miElemento.offsetHeight;
     function detectarColision(elemento){
@@ -68,7 +80,7 @@ window.addEventListener('scroll', function() {
   if (detectarColision(miSection2)) {
     // Colisión detectada
    
-    body.style.backgroundColor = '#DCD7C9';
+    body.style.backgroundColor = '#E7AB79';
   } else {
     // No hay colisión
     
@@ -76,7 +88,7 @@ window.addEventListener('scroll', function() {
   if (detectarColision(miSection3)) {
     // Colisión detectada
    
-    body.style.backgroundColor = '#DCD7C9';
+    body.style.backgroundColor = '#E7AB79';
   } else {
     // No hay colisión
     
@@ -84,7 +96,7 @@ window.addEventListener('scroll', function() {
   if (detectarColision(miSection4)) {
     // Colisión detectada
     
-    body.style.backgroundColor = '#EEE3CB';
+    body.style.backgroundColor = '#774360';
     
   } else {
     // No hay colisión
