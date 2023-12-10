@@ -26,8 +26,8 @@ const miSection2 = document.querySelector('.second_section');
 const miSection3 = document.querySelector('.third_section');
 const miSection4 = document.querySelector('.four_window');
 const miSection5 = document.querySelector('.five_section');
-
-
+const video = document.querySelector('.video');
+const miSection45 = document.querySelector('.mid-45_section');
 
 const details = document.querySelectorAll('.details');
 
@@ -46,7 +46,25 @@ details.forEach((e, index) => {
   });
 });
 
+let swiper="";
+  swiper = new Swiper(".mySwiper", {
+      effect: "cards",
+      grabCursor: true,
+      perSlideOffset: 8,
+      perSlideRotate: 2,
+      loop: true,
+      autoplayDisableOnInteraction: false,
+      on: {
+        click: () =>{
+        // Obtiene el índice del slide actual al hacer clic
+        
 
+        // Abre una nueva pestaña con la URL deseada (reemplaza 'URL_DESEADA' con tu URL real)
+          window.open('../html/news.html', '_blank');
+         }
+      }
+      
+    });
 
 
 
@@ -77,10 +95,11 @@ window.addEventListener('scroll', function() {
     // No hay colisión
    
   }
+  
   if (detectarColision(miSection2)) {
     // Colisión detectada
    
-    body.style.backgroundColor = '#E7AB79';
+    body.style.backgroundColor = '#bfacb5';
   } else {
     // No hay colisión
     
@@ -88,7 +107,7 @@ window.addEventListener('scroll', function() {
   if (detectarColision(miSection3)) {
     // Colisión detectada
    
-    body.style.backgroundColor = '#E7AB79';
+    body.style.backgroundColor = '#bfacb5';
   } else {
     // No hay colisión
     
@@ -96,10 +115,22 @@ window.addEventListener('scroll', function() {
   if (detectarColision(miSection4)) {
     // Colisión detectada
     
-    body.style.backgroundColor = '#774360';
+    body.style.backgroundColor = '#8b687c';
     
   } else {
     // No hay colisión
+    
+  }
+  if (detectarColision(miSection45)) {
+    // Colisión detectada
+    console.log("estoy en las card")
+    swiper.params.autoplay.delay = 1000;
+    swiper.autoplay.start();
+   
+    
+  } else {
+    // No hay colisión
+    swiper.autoplay.stop();
     
   }
 });
