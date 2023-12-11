@@ -24,12 +24,14 @@ const body = document.querySelector('#body');
 const miSection1 = document.querySelector('.first_section');
 const miSection2 = document.querySelector('.second_section');
 const miSection3 = document.querySelector('.third_section');
-const miSection4 = document.querySelector('.four_window');
+const miSection4 = document.querySelector('.four_section');
 const miSection5 = document.querySelector('.five_section');
 const video = document.querySelector('.video');
 const miSection45 = document.querySelector('.mid-45_section');
 
 const details = document.querySelectorAll('.details');
+const icon1  = document.querySelector('#d1');
+const icon2  = document.querySelector('#d2');
 
 
 details.forEach((e, index) => {
@@ -37,14 +39,30 @@ details.forEach((e, index) => {
     if (index === 0 && e.open) {
       
       details[1].removeAttribute('open');
-    } else if (index === 1 && e.open) {
+      console.log("esta abierto")
+     
+     icon1.classList.remove("fa-plus");
+      icon1.classList.add("fa-minus");
+
+    }else if (index === 0 && !e.close){
+      icon1.classList.remove("fa-minus");
+      icon1.classList.add("fa-plus");
+    }
+    
+
+    if (index === 1 && e.open) {
      
       details[0].removeAttribute('open');
-    } else {
+      icon2.classList.remove("fa-plus");
+      icon2.classList.add("fa-minus");
+    } else if (index === 1 && !e.close) {
       
+      icon2.classList.remove("fa-minus");
+      icon2.classList.add("fa-plus");
     }
   });
 });
+
 
 let swiper="";
   swiper = new Swiper(".mySwiper", {

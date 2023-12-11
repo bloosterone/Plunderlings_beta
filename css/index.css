@@ -1,9 +1,10 @@
 :root {
-  --estructura: red;
+  /* --estructura: red;
   --estructura_hijo: green;
   --estructura_hijo-subhijo: pink;
   --section: black;
-}
+*/
+} 
 
 * {
   margin: 0;
@@ -45,7 +46,7 @@ main {
 }
 header{
   width: 100%;
-  height: 100vh;
+  height: 30vh;
   outline: 2px solid var(--estructura_hijo);
   background: transparent;
  
@@ -53,10 +54,10 @@ header{
 
 section {
   width: 100%;
-  height: 100vh;
+  height:800px;
   outline: 2px solid var(--estructura_hijo);
   background: transparent;
-  min-height: 100vh;
+  
   max-width: 1200px;
 }
 
@@ -123,6 +124,7 @@ section {
   align-content: center;
   align-items: center;
   color: #fff;
+  height: 100vh;
 }
 
 .first_section .first_section-containerA {
@@ -565,7 +567,7 @@ section {
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  padding: 5%;
+  padding: 0 5%;
 }
 
 .four_section .four_window .four_window_container {
@@ -844,20 +846,22 @@ bottom: 0;
 .six_section .six_section-window{
   width: 100%;
   height: 640px;
-  background-color: #fff;
+  
   border-radius: 40px;
   display: flex;
   flex-direction: row;
   position: relative;
+  justify-content: space-between;
 }
 .six_section-window .container_background {
-  width: 50%;
+  width: 49%;
   height: 100%;
-  outline: 1px solid var(--estructura);
+  
   display: flex;
   justify-content: center;
   align-items: center;
- 
+  border-radius: 40px;
+  padding: 20px;
   /* background-image: url(../img/faq.jpg);
   background-size: cover;
   backdrop-filter: blur(10px) saturate(180%);
@@ -868,18 +872,21 @@ bottom: 0;
 .background {
   width: 100%;
   height: 100%;
-  background-image: url('../img/faq.jpg');
+  
   background-size: cover;
   background-position: center;
   position: absolute;
   filter: blur(5px) saturate(180%);
+  border-radius: 40px;
   -webkit-filter: blur(5px) saturate(180%); /* Aplica un desenfoque a la imagen de fondo */
 }
 
 .container_background h2 {
+  
+  height: 100%;
   font-family: 'Clash Display', sans-serif;
   color: transparent; /* Ajusta el color del texto con opacidad */
-  font-size: 6em;
+  font-size: 6.8em;
   text-align: center;
   font-weight: 600;
   line-height: 1em;
@@ -887,7 +894,7 @@ bottom: 0;
   transform: rotate(180deg);
   background-clip: text;
   -webkit-text-fill-color: transparent;
- background:url(../img/faq.jpg);
+ background:url(../img/faq2.jpg);
  background-position: center;
  background-size: cover;
  
@@ -897,34 +904,53 @@ bottom: 0;
 }
 
 .container_details {
-  width: 50%;
+  width: 49%;
   height: 100%;
-  outline: 1px solid var(--estructura);
-  padding-top: 4%;
+  
+  background-image: url(../img/faq2.jpg);
+  background-position: 50%;
+  background-size: cover;
   display: flex;
-  flex-direction: row;
-  justify-content: space-around;
-  align-content: flex-start;
-  align-items: start;
+  flex-direction: column;
+  justify-content: space-evenly;
+  align-content: center;
+  align-items: center;
+  border-radius: 40px;
 }
+.third_window-mask2{
+  backdrop-filter: blur(3px) saturate(180%);
+  -webkit-backdrop-filter: blur(3px) saturate(180%);
+  background-color: rgba(14, 12, 12, 0.342);
+  border-radius: 40px;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+  align-items: center;
+  align-content: center;
 
+  
+}
 .container_details details {
   border: 1px solid rgba(97, 125, 255, 0.2);
-  width: 40%;
+  width: 60%;
   background: #f7fbff;
+  box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
   border-radius: 20px;
-  height: 80px;
+  height: 100px;
   transition: all 0.5s ease-out;
   /* Añade una transición suave */
   overflow: hidden;
   /* Oculta el contenido cuando está contraído */
+  
 }
 
 .container_details details summary {
   user-select: none;
   width: 100%;
   cursor: pointer;
-  height: 80px;
+  height: 100px;
   font-weight: bold;
   font-family: 'Kanit', sans-serif;
   font-size: 20px;
@@ -969,10 +995,10 @@ bottom: 0;
 }
 
 .container_details details[open] {
-  height: 240px;
+  height: 280px;
   /* Altura máxima cuando está expandido */
   border: none;
-  box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+ 
 }
 
 /* ------------SIX SECTION---------- */
