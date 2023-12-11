@@ -728,26 +728,7 @@ bottom: 0;
 
 
 /* ------------FIVE SECTION---------- */
-.five_section {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  align-content: center;
-  position: relative;
-  flex-direction: column;
-  overflow: hidden;
-}
 
-
-.five_section .five_section_container {
-  width: 100%;
-  height: 80%;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  align-content: center;
-  position: relative;
-}
 
 
 
@@ -836,6 +817,7 @@ bottom: 0;
 }
 
           /* ----------loader------- */
+
 
 /* ------------SIX SECTION---------- */
 .six_section {
@@ -1002,6 +984,31 @@ bottom: 0;
 }
 
 /* ------------SIX SECTION---------- */
+
+
+
+.mid-67_section{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  align-content: center;
+  position: relative;
+  flex-direction: column;
+}          
+.mid-67_windows{
+  border-radius: 30px;
+  width: 100%;
+  height: 640px;
+  background-color: #ccc;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 0 5%;
+}
+
+
+
 
        /* ------------SEVEN SECTION---------- */
 .seven_section {
