@@ -25,13 +25,72 @@ const miSection1 = document.querySelector('.first_section');
 const miSection2 = document.querySelector('.second_section');
 const miSection3 = document.querySelector('.third_section');
 const miSection4 = document.querySelector('.four_section');
-const miSection5 = document.querySelector('.five_section');
+
+const miSection6 = document.querySelector('.six_section');
 const video = document.querySelector('.video');
 const miSection45 = document.querySelector('.mid-45_section');
-
+const miSection67 = document.querySelector('.mid-67_section');
+const miSection7 = document.querySelector('.seven_section');
 const details = document.querySelectorAll('.details');
 const icon1  = document.querySelector('#d1');
 const icon2  = document.querySelector('#d2');
+const gallery = document.querySelectorAll('.img_click');
+const detector_footer = document.querySelector('.seven_section');
+
+
+
+let scrollY = window.scrollY;
+
+function scrollUpHandler() {
+ 
+  // Aumenta el ancho del elemento con clase .eight_windows en un 5%
+  adjustElementWidth(-5);
+}
+function scrollDownHandler() {
+ 
+  // Aumenta el ancho del elemento con clase .eight_windows en un 5%
+  adjustElementWidth(5);
+}
+
+
+function adjustElementWidth( percentage) {
+  let eight_windows = document.querySelector('.eight_windows');
+  if (eight_windows) {
+    // Obtiene el ancho actual del elemento
+    const currentWidth = eight_windows.offsetWidth;
+console.log(currentWidth)
+    // Calcula el nuevo ancho aplicando el porcentaje
+    const newWidth = currentWidth + (percentage * 2) ;
+
+    // Asigna el nuevo ancho al elemento
+    eight_windows.style.width = `${newWidth}px`;
+  }
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+gallery.forEach((e) => {
+ 
+  e.addEventListener('click', () => {
+    window.open('../html/gallery.html', '_blank');
+  });
+});
+
 
 
 details.forEach((e, index) => {
@@ -64,8 +123,8 @@ details.forEach((e, index) => {
 });
 
 
-let swiper="";
-  swiper = new Swiper(".mySwiper", {
+let swiper1="";
+  swiper1 = new Swiper(".mySwiper", {
       effect: "cards",
       grabCursor: true,
       perSlideOffset: 8,
@@ -83,12 +142,12 @@ let swiper="";
       }
       
     });
+    
 
 
-
-// Escuchar eventos de desplazamiento (scroll)
 window.addEventListener('scroll', function() {
 
+  
 
 //   const offsetBottom = miElemento.offsetTop + miElemento.offsetHeight;
     function detectarColision(elemento){
@@ -141,15 +200,49 @@ window.addEventListener('scroll', function() {
   }
   if (detectarColision(miSection45)) {
     // Colisión detectada
-    console.log("estoy en las card")
-    swiper.params.autoplay.delay = 1000;
-    swiper.autoplay.start();
+   
+    swiper1.params.autoplay.delay = 1000;
+    swiper1.autoplay.start();
    
     
   } else {
     // No hay colisión
-    swiper.autoplay.stop();
+    swiper1.autoplay.stop();
     
+  }
+  if (detectarColision(miSection6)) {
+    // Colisión detectada
+    
+    body.style.backgroundColor = '#8b687c';
+    
+  } else {
+    // No hay colisión
+    
+  }
+  if (detectarColision(miSection67)) {
+    // Colisión detectada
+    
+    body.style.backgroundColor = '#ccc';
+    
+  } else {
+    // No hay colisión
+    
+  }
+  if (detectarColision(detector_footer)) {
+    // Colisión detectada
+    if (window.scrollY < scrollY) {
+      scrollUpHandler();
+    } else {
+      scrollDownHandler();
+    }
+    scrollY = window.scrollY;
+    console.log("tocando footer")
+    
+    
+  } else {
+    // No hay colisión
+   
+    console.log("NO tocando footer")
   }
 });
 
