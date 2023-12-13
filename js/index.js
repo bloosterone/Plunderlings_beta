@@ -36,6 +36,25 @@ const icon1  = document.querySelector('#d1');
 const icon2  = document.querySelector('#d2');
 const gallery = document.querySelectorAll('.img_click');
 const detector_footer = document.querySelector('.seven_section');
+const social_media = document.querySelectorAll('.social_media');
+
+  
+
+social_media.forEach((s, index) => {
+  s.addEventListener('click', () => {
+   if(index == 0){
+    window.open('https://www.facebook.com/Plunderlings/', '_blank');
+   }else if (index == 1){
+   
+    window.open(' https://www.instagram.com/plunderlings', '_blank');
+   }
+   else{
+    window.open(' https://www.twitter.com/plunderlings', '_blank');
+   }
+    
+  });
+});
+
 
 
 
@@ -58,7 +77,6 @@ function adjustElementWidth( percentage) {
   if (eight_windows) {
     // Obtiene el ancho actual del elemento
     const currentWidth = eight_windows.offsetWidth;
-console.log(currentWidth)
     // Calcula el nuevo ancho aplicando el porcentaje
     const newWidth = currentWidth + (percentage * 2) ;
 
@@ -66,21 +84,6 @@ console.log(currentWidth)
     eight_windows.style.width = `${newWidth}px`;
   }
 }
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 
 
@@ -236,13 +239,11 @@ window.addEventListener('scroll', function() {
       scrollDownHandler();
     }
     scrollY = window.scrollY;
-    console.log("tocando footer")
     
     
   } else {
     // No hay colisión
    
-    console.log("NO tocando footer")
   }
 });
 
