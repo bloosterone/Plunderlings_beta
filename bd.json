@@ -1,0 +1,67 @@
+{
+    "imagenes": [
+      {
+        "titulo": "Plunderlings Nomad Goyle",
+        "ruta": "https://cdn.glitch.global/782cfc80-69e3-4c43-848a-a786f47f7981/ironman.glb?v=1700165816197",
+        "link": "https://www.bigbadtoystore.com/Product/VariationDetails/101223?o=4"
+      },
+      {
+        "titulo": "Plunderlong Feral 8-Ball",
+        "ruta": "https://cdn.glitch.global/782cfc80-69e3-4c43-848a-a786f47f7981/hulk.glb?v=1700169011543",
+        "link": "https://www.bigbadtoystore.com/Product/VariationDetails/202451?o=4"
+        
+      },
+      {
+        "titulo": "Plunderlong Tinker Rusty",
+        "ruta": "../img/la3.webp",
+        "link": "https://www.bigbadtoystore.com/Product/VariationDetails/205442?o=4"
+      },
+      {
+        "titulo": "Plunderlong Cursed Cayo",
+        "ruta": "../img/la4.webp",
+        "link": "https://www.bigbadtoystore.com/Product/VariationDetails/203179?o=4"
+      },
+      {
+        "titulo": "Plunderstrong Captain BlacJak",
+        "ruta": "../img/la5.webp",
+        "link": "https://www.bigbadtoystore.com/Product/VariationDetails/201295?o=4"
+      },
+      {
+        "titulo": "Plunderstrong Berserker Mango",
+        "ruta": "../img/la6.webp",
+        "link": "https://www.bigbadtoystore.com/Product/VariationDetails/199773?o=4"
+      },
+      {
+        "titulo": "Plunderlings Feral Chedar",
+        "ruta": "../img/la7.webp",
+        "link": "https://www.bigbadtoystore.com/Product/VariationDetails/105357?o=4"
+      },
+      {
+        "titulo": "Plunderlong Raider Ace",
+        "ruta": "../img/la8.webp",
+        "link": "https://www.bigbadtoystore.com/Product/VariationDetails/199770?o=4"
+      },
+      {
+        "titulo": "Plunderstrong Nomad Poncho",
+        "ruta": "../img/la9.webp",
+        "link": "https://www.bigbadtoystore.com/Product/VariationDetails/202075?o=4"
+      },
+      {
+        "titulo": "Plunderstrong Raider Blitz",
+        "ruta": "../img/la10.webp",
+        "link": "https://www.bigbadtoystore.com/Product/VariationDetails/199772?o=4"
+      },
+      {
+        "titulo": "Plunderlong Captain Ojoe",
+        "ruta": "../img/la11.webp",
+        "link": "https://www.bigbadtoystore.com/Product/VariationDetails/201279?o=4"
+      },
+      {
+        "titulo": "Plunderlings Feral Zombone",
+        "ruta": "../img/la12.webp",
+        "link": "https://www.bigbadtoystore.com/Product/VariationDetails/105360?o=4"
+      }
+      
+      
+    ]
+  }

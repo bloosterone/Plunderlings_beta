@@ -37,7 +37,19 @@ const icon2  = document.querySelector('#d2');
 const gallery = document.querySelectorAll('.img_click');
 const detector_footer = document.querySelector('.seven_section');
 const social_media = document.querySelectorAll('.social_media');
+const scrolldownElement = document.querySelector('#scrolldown');
 
+// Función para pausar/reanudar la animación
+function toggleAnimation() {
+ scrolldownElement.classList.remove("scrolldown");
+      scrolldownElement.classList.add("paused");
+  
+}
+function toggleAnimationPlay() {
+  scrolldownElement.classList.remove("paused");
+       scrolldownElement.classList.add("scrolldown");
+   
+ }
   
 
 social_media.forEach((s, index) => {
@@ -146,11 +158,19 @@ let swiper1="";
       
     });
     
-
+    $('#return-to-top').click(function() {      // When arrow is clicked
+      $('body,html').animate({
+          scrollTop : 0                       // Scroll to top of body
+      }, 1000);
+  });
 
 window.addEventListener('scroll', function() {
+      if ($(this).scrollTop() >= 50) {        // If page is scrolled more than 50px
+        $('#return-to-top').fadeIn(200);    // Fade in the arrow
+    } else {
+        $('#return-to-top').fadeOut(200);   // Else fade out the arrow
+    }
 
-  
 
 //   const offsetBottom = miElemento.offsetTop + miElemento.offsetHeight;
     function detectarColision(elemento){
@@ -171,9 +191,10 @@ window.addEventListener('scroll', function() {
     // Colisión detectada
     
     body.style.backgroundColor = '#222222';
+    toggleAnimationPlay();
   } else {
     // No hay colisión
-   
+   toggleAnimation();
   }
   
   if (detectarColision(miSection2)) {
