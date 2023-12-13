@@ -32,7 +32,7 @@
 
     function handleClick(event, index) {
       console.log(event.currentTarget);
-      const url = 'https://raw.githubusercontent.com/bloosterone/Plunderlings/main/bd.json';
+      const url = 'https://raw.githubusercontent.com/bloosterone/Plunderlings_beta/main/bd.json';
 	    fetch(url)
       .then(response => {
         if (!response.ok) {
