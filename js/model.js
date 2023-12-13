@@ -12,7 +12,7 @@
 
       // Agrega la clase "selected" a la imagen seleccionada
       
-      element.nextElementSibling.classList.add("selected");
+      
     };
     const slides = document.querySelectorAll(".slide");
       
