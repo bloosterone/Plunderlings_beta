@@ -3,7 +3,7 @@
       
         window.switchSrc = (element, name) => {
       const base = "../assets/" + name;
-      console.log(base);
+      
       modelViewer.src = base + '.glb';
       modelViewer.poster = base + '.webp';
 
@@ -23,15 +23,15 @@
     slides.forEach((character, index) => {
       character.addEventListener('click', (event) => {
         
-        console.log("Índice del elemento seleccionado:", index);
+        
         handleClick(event, index); // Paso el índice como argumento
 
       });
     });
     
-
+    let link = "";
     function handleClick(event, index) {
-      console.log(event.currentTarget);
+      
       const url = 'https://raw.githubusercontent.com/bloosterone/Plunderlings_beta/main/bd.json';
 	    fetch(url)
       .then(response => {
@@ -46,26 +46,27 @@
         const imagenSeleccionada = imagenes[index];
         
       
-        let link = "";
+        
           tituloModel.classList.add('fade-out'); // Agrega la clase para la transición de salida
           btnBuy.classList.add('fade-out2');
           // Espera un breve momento antes de cambiar el texto
           setTimeout(() => {
             tituloModel.textContent =`${imagenSeleccionada.titulo}`;
-            console.log(`${imagenSeleccionada.titulo}`);
-            link = `${imagenSeleccionada.link}`;
-            console.log(link);
-            btnBuy.addEventListener('click', () => {
-              
-              window.open(`${link}`, '_blank')
-              });
+            
+            
+            
             setTimeout(() => {
               tituloModel.classList.remove('fade-out');
               btnBuy.classList.remove('fade-out2'); 
                // Elimina la clase para la transición de entrada
-            }, 200); // Puedes ajustar este tiempo según tus preferencias
-          }, 500); // Puedes ajustar este tiempo según tus preferencias
-
+            }, 200); 
+          }, 500); 
+          link = `${imagenSeleccionada.link}`;
+          
+            btnBuy.addEventListener('click', () => {
+              
+              window.open(`${link}`, '_blank')
+              });
           
          
 
