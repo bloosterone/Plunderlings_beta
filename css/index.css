@@ -1,8 +1,8 @@
 :root {
-   /* --estructura: red;
+   --estructura: red;
   --estructura_hijo: green;
   --estructura_hijo-subhijo: pink;
-  --section: black;  */
+  --section: black; 
 --red: #ed1c5b;
 } 
 
@@ -427,15 +427,20 @@ bottom: 20px;
 }
 
 @media only screen and (max-width: 800px) {
+  .second_section{
+    width: 100%;
+    min-height: 500px;
+    height: 50vh;
+  }
   .second_section .second_window {
     border-radius: 30px;
+    padding-top: 10px;
     width: 80%;
     height: 70%;
-    
   }
 
   .second_section .second_window_container h2 {
-    font-size: 5em;
+    font-size: 4em;
     line-height: 1em;
   }
 
@@ -490,7 +495,42 @@ bottom: 20px;
   font-weight: 600;
   line-height: 1em;
 }
- 
+@media only screen and (max-width: 800px) {
+  .mid-23_section{
+    
+    width: 100%;
+    min-height: 500px;
+    height: 50vh;
+  }
+  .mid-23_section .mid-23_windows {
+    border-radius: 30px;
+    width: 80%;
+    height: 70%;
+  }
+  .mid-23_windowsB{
+    padding: 1%;
+  }
+   .mid-23_windowsB h2{
+    width: 100%;
+    font-size: 1.5em;
+    text-align: center;
+    font-weight: 600;
+    line-height: 1em;
+  }
+
+  .mid-23_section .mid-23_windows .mid-23_windowsA{
+    width: 50%;
+    border-radius: 40px 0 0 40px;
+    padding: 0;
+  }
+  .mid-23_section .mid-23_windows .mid-23_windowsA img{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+   
+    border-radius: 30px 0 0 40px;
+  }
+}
 
 
 
@@ -704,26 +744,42 @@ bottom: 20px;
   }
 
   .third_section .third_window-A {
-    width: 98%;
-    height: 50%;
+    width: 80%;
+    min-height: 500px;
+    height: 50vh;
+    padding-top: 80px;
+    
+  }
+  .third_window-mask{
+    width: 100%;
+    
   }
 
   .third_section .third_window-A .third_window-A_uno .third_window-target {
-    min-width: 50px;
-    min-height: 50px;
+    min-width: 40px;
+    min-height: 40px;
   }
 
   .third_section .third_window {
-    width: 90%;
-    height: 40%;
-    padding: 5%;
+    width: 80%;
+    height: 48%;
+    padding: 2%;
   }
 
   .third_section .third_window .third_window-container h1 {
-    font-size: 17vw;
-    text-align: center;
-    font-weight: 600;
-    line-height: 1em;
+    width: 100%;
+    font-size: 3.0em;
+    
+  }
+  .btn_buy{
+    width: 200px;
+    height: 50px;
+    transition:all 0.5s ease-in-out;
+    position: absolute;
+    top: 92%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    z-index: 99;
   }
 }
 
@@ -806,15 +862,23 @@ bottom: 20px;
   line-height: 1em;
   color: #fff;
 }
-@media only screen and (max-width: 600px) {
+@media only screen and (max-width: 800px) {
+  .four_section{
+    width: 100%;
+    min-height: 500px;
+    height: 50vh;
+  }
   .four_section .four_window {
     
-    width: 90%;
-    height: 60%;
-    background-color: #774360;
+    border-radius: 30px;
+    padding-top: 10px;
+    width: 80%;
+    height: 70%;
+    background-color: rgb(139, 104, 124);
     
   }
-
+ 
+  
   .four_section .four_window .four_window_container .four_window_container-A .four_window_container-A-number{
     align-items: end;
   }
@@ -828,8 +892,8 @@ bottom: 20px;
     margin-bottom: 30px;
   }
   .four_section h2 {
-    font-size: 3em;
-    line-height: .9em;
+    font-size: 2em;
+    line-height: 1em;
   }
 }
 

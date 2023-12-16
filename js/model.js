@@ -64,8 +64,15 @@
           link = `${imagenSeleccionada.link}`;
           
             btnBuy.addEventListener('click', () => {
+
+                let nuevoLink = window.open(`${link}`, '_blank');
+              if (nuevoLink) {
+                // La ventana emergente se abrió correctamente
+              } else {
+                // La ventana emergente fue bloqueada
+                alert('¡La ventana emergente fue bloqueada! Asegúrate de permitir ventanas emergentes en tu navegador.');
+              }
               
-              window.open(`${link}`, '_blank')
               });
           
          

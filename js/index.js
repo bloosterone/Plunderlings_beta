@@ -55,13 +55,32 @@ function toggleAnimationPlay() {
 social_media.forEach((s, index) => {
   s.addEventListener('click', () => {
    if(index == 0){
-    window.open('https://www.facebook.com/Plunderlings/', '_blank');
+   let nuevaVentana= window.open('https://www.facebook.com/Plunderlings/', '_blank');
+    if (nuevaVentana) {
+      // La ventana emergente se abrió correctamente
+    } else {
+      // La ventana emergente fue bloqueada
+      alert('¡La ventana emergente fue bloqueada! Asegúrate de permitir ventanas emergentes en tu navegador.');
+    }
+   
    }else if (index == 1){
    
-    window.open(' https://www.instagram.com/plunderlings', '_blank');
+    let nuevaVentana2 = window.open(' https://www.instagram.com/plunderlings', '_blank');
+    if (nuevaVentana2) {
+      // La ventana emergente se abrió correctamente
+    } else {
+      // La ventana emergente fue bloqueada
+      alert('¡La ventana emergente fue bloqueada! Asegúrate de permitir ventanas emergentes en tu navegador.');
+    }
    }
    else{
-    window.open(' https://www.twitter.com/plunderlings', '_blank');
+    let nuevaVentana3= window.open(' https://www.twitter.com/plunderlings', '_blank');
+    if (nuevaVentana3) {
+      // La ventana emergente se abrió correctamente
+    } else {
+      // La ventana emergente fue bloqueada
+      alert('¡La ventana emergente fue bloqueada! Asegúrate de permitir ventanas emergentes en tu navegador.');
+    }
    }
     
   });
